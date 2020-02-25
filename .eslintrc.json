@@ -20,8 +20,14 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
-  "rules": {},
+  "rules": {
+    "react/prop-types": 0
+  },
+  "plugins": [
+    "react",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "settings": {
     "react": {
       "version": "detect"

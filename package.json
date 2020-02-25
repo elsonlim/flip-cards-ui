@@ -6,21 +6,17 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.4.0",
-    "typescript": "~3.7.2"
+    "react-scripts": "3.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint -c .eslintrc.json --ext .ts src"
+    "lint": "eslint -c .eslintrc.json --ext .ts src",
+    "tc": "react-scripts test --coverage --watchAll=false"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,9 +34,21 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.28",
+    "@types/react": "^16.9.22",
+    "@types/react-dom": "^16.9.5",
     "@typescript-eslint/eslint-plugin": "^2.21.0",
     "@typescript-eslint/parser": "^2.21.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.18.3"
+    "eslint-plugin-react": "^7.18.3",
+    "node-sass": "^4.13.1",
+    "typescript": "^3.7.5"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!src/index.tsx",
+      "src/**/*.tsx"
+    ]
   }
 }
