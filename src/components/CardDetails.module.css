@@ -1,0 +1,21 @@
+.fullText {
+  display: flex;
+  align-items: flex-end;
+}
+
+.text {
+  display: inline-flex;
+  flex-direction: row;
+  margin-left: 0.2em;
+  align-items: flex-end;
+}
+
+.furiKanji {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.furi {
+  font-size: 0.4rem;
+}
