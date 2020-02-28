@@ -1,0 +1,57 @@
+.flipCard {
+  font-size: 1.2rem;
+  height: 8em;
+  width: 12em;
+  background-color: #4682b4;
+  border: 2px solid #d7d7d7;
+  margin: 1em 0 1em 1em;
+  border-radius: 0.4em;
+  color: #f5f5f5;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flipCardBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+}
+
+.pill {
+  font-size: 0.8rem;
+  padding: 0.1em;
+  margin-left: 0.5em;
+  border: 1px solid #d7d7d7;
+  border-radius: 0.5em;
+  background-color: #4682b4;
+}
+
+.fullText {
+  display: flex;
+  align-items: flex-end;
+}
+
+.text {
+  display: inline-flex;
+  flex-direction: row;
+  margin-left: 0.2em;
+  align-items: flex-end;
+}
+
+.furiKanji {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.furi {
+  font-size: 0.4rem;
+}
