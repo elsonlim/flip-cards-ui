@@ -1,6 +1,6 @@
 import React from "react";
 import textToFuriKanji from "../utils/textToFuriKanji";
-import { FrontJapanese } from "../interface/card.interface";
+import { FrontJapanese, BackJapanese } from "../interface/card.interface";
 import styles from "./CardDetails.module.css";
 
 export const FrontDetail: React.SFC<FrontJapanese> = ({
@@ -13,7 +13,7 @@ export const FrontDetail: React.SFC<FrontJapanese> = ({
 
     const texts = furiKanjiArray.map(furiKanji => {
       return (
-        <div className={styles.furiKanji}>
+        <div key={furiKanji.kanji} className={styles.furiKanji}>
           <div className={styles.furi}>{furiKanji.furi}</div>
           <div className={styles.kanji}>{furiKanji.kanji}</div>
         </div>
@@ -25,8 +25,12 @@ export const FrontDetail: React.SFC<FrontJapanese> = ({
 
   return (
     <div className={styles.flipCardBody}>
-      <div className={styles.fullText}>text: {getTextWithFurigana()}</div>
-      <div>hiragana: {hiragana}</div>
+      <div className={styles.fullText}>{getTextWithFurigana()}</div>
+      <div>{hiragana}</div>
     </div>
   );
+};
+
+export const BackDetail: React.SFC<BackJapanese> = ({ english }) => {
+  return <div>{english}</div>;
 };

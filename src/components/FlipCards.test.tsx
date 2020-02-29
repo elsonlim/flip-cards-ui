@@ -1,5 +1,5 @@
 import React from "react";
-import { render, waitForElement, act } from "@testing-library/react";
+import { render, waitForElement, fireEvent } from "@testing-library/react";
 import axios from "../utils/axios";
 import FlipCards from "./FlipCards";
 import MockAdapter from "axios-mock-adapter";
@@ -24,5 +24,22 @@ describe("FlipCards", () => {
 
     await waitForElement(() => getByTestId("flip-card"));
     expect(getAllByTestId("flip-card")).toHaveLength(1);
+  });
+
+  it("should render font of card", async () => {
+    const { getByText, getByTestId } = render(<FlipCards />);
+
+    await waitForElement(() => getByTestId("flip-card"));
+    expect(getByText(/といあわせる/)).toBeInTheDocument();
+  });
+
+  it("should render back of card when clicked", async () => {
+    const { getByText, getByTestId } = render(<FlipCards />);
+
+    await waitForElement(() => getByTestId("flip-card"));
+    const flipCard = getByTestId("flip-card");
+
+    fireEvent.click(flipCard);
+    expect(getByText(/Inquire/)).toBeInTheDocument();
   });
 });

@@ -13,6 +13,7 @@ export const card1 = {
       furi: "あ",
     },
   ],
+  english: "Inquire",
 };
 
 export const cards = [card1];

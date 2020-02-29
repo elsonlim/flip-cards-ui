@@ -9,7 +9,7 @@ export interface FrontJapanese {
 }
 
 export interface BackJapanese {
-  text: string;
+  english: string;
 }
 
 export interface Japanese extends FrontJapanese, BackJapanese {

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Japanese } from "../interface/card.interface";
 import styles from "./FlipCard.module.css";
-import { FrontDetail } from "./CardDetails";
+import { FrontDetail, BackDetail } from "./CardDetails";
 import Pill from "./Pill";
 
 interface FlipCardInterface {
@@ -9,19 +9,30 @@ interface FlipCardInterface {
 }
 
 const FlipCard: React.SFC<FlipCardInterface> = ({ data }) => {
+  const [isFrontFacing, setIsFrontFacing] = useState(true);
+  const toggleFacing = () => setIsFrontFacing(!isFrontFacing);
+
   return (
-    <div className={styles.flipCard} data-testid="flip-card">
+    <div
+      onClick={toggleFacing}
+      className={styles.flipCard}
+      data-testid="flip-card"
+    >
       <div>#{data.index}</div>
 
-      <FrontDetail
-        hiragana={data.hiragana}
-        text={data.text}
-        furigana={data.furigana}
-      />
+      {isFrontFacing ? (
+        <FrontDetail
+          hiragana={data.hiragana}
+          text={data.text}
+          furigana={data.furigana}
+        />
+      ) : (
+        <BackDetail english={data.english} />
+      )}
 
       <div className={styles.tags}>
         {data.tags.map(tag => (
-          <Pill tag={tag} />
+          <Pill key={tag} tag={tag} />
         ))}
       </div>
     </div>

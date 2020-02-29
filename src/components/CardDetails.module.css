@@ -1,3 +1,9 @@
+.flipCardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .fullText {
   display: flex;
   align-items: flex-end;
@@ -6,7 +12,6 @@
 .text {
   display: inline-flex;
   flex-direction: row;
-  margin-left: 0.2em;
   align-items: flex-end;
 }
 
@@ -17,5 +22,5 @@
 }
 
 .furi {
-  font-size: 0.4rem;
+  font-size: 0.6rem;
 }

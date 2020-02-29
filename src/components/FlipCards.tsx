@@ -8,7 +8,6 @@ const FlipCards = () => {
   const [cards, setCards] = useState([] as Japanese[]);
 
   useEffect(() => {
-    console.log(process.env.REACT_APP_API_URL);
     axiosInstance
       .get("/flipcards")
       .then(res => {
