@@ -15,21 +15,22 @@ const FlipCard: React.SFC<FlipCardInterface> = ({ data }) => {
   return (
     <div
       onClick={toggleFacing}
-      className={styles.flipCard}
+      className={isFrontFacing ? styles.flipCard : styles.flipCardOpen}
       data-testid="flip-card"
     >
       <div>#{data.index}</div>
 
-      {isFrontFacing ? (
-        <FrontDetail
-          hiragana={data.hiragana}
-          text={data.text}
-          furigana={data.furigana}
-        />
-      ) : (
-        <BackDetail english={data.english} />
-      )}
-
+      <div className={styles.text}>
+        {isFrontFacing ? (
+          <FrontDetail
+            hiragana={data.hiragana}
+            text={data.text}
+            furigana={data.furigana}
+          />
+        ) : (
+          <BackDetail english={data.english} />
+        )}
+      </div>
       <div className={styles.tags}>
         {data.tags.map(tag => (
           <Pill key={tag} tag={tag} />

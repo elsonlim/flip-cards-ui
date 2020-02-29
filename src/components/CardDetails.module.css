@@ -9,12 +9,6 @@
   align-items: flex-end;
 }
 
-.text {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: flex-end;
-}
-
 .furiKanji {
   display: flex;
   flex-direction: column;
