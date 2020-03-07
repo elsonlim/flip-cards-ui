@@ -7,4 +7,5 @@
 
 * {
   box-sizing: inherit;
+  border-collapse: collapse;
 }
