@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Japanese } from "../interface/card.interface";
 import styles from "./FlipCard.module.css";
 import { FrontDetail, BackDetail } from "./CardDetails";
@@ -6,11 +6,19 @@ import Pill from "./Pill";
 
 interface FlipCardInterface {
   data: Japanese;
+  isFrontFacingByDefault?: boolean;
 }
 
-const FlipCard: React.SFC<FlipCardInterface> = ({ data }) => {
-  const [isFrontFacing, setIsFrontFacing] = useState(true);
+const FlipCard: React.SFC<FlipCardInterface> = ({
+  data,
+  isFrontFacingByDefault = true,
+}) => {
+  const [isFrontFacing, setIsFrontFacing] = useState(isFrontFacingByDefault);
   const toggleFacing = () => setIsFrontFacing(!isFrontFacing);
+
+  useEffect(() => {
+    setIsFrontFacing(isFrontFacingByDefault);
+  }, [isFrontFacingByDefault]);
 
   return (
     <div

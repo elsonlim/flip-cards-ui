@@ -1,0 +1,17 @@
+.optionBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+.toggle {
+  height: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.toggleText {
+  margin-right: 0.4em;
+}
