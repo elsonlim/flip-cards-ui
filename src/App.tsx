@@ -7,13 +7,13 @@ import "semantic-ui-css/semantic.min.css";
 import { Provider } from "react-redux";
 import store from "./store";
 
-function App() {
+function App({loginFeature = false}) {
   const [isLogin, setIsLogin] = useState(false);
 
   return (
     <Provider store={store}>
       <div className="App">
-        <Header isLogin={isLogin} setIsLogin={setIsLogin} />
+        <Header isLogin={isLogin} setIsLogin={setIsLogin} loginFeature={loginFeature}/>
         <OptionBar />
         <FlipCardsGallery />
       </div>

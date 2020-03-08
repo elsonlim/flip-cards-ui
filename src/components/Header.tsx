@@ -3,15 +3,16 @@ import styles from "./Header.module.css";
 
 interface HeaderProps {
   isLogin: boolean;
+  loginFeature: boolean;
   setIsLogin: (isLogin: boolean) => void;
 }
 
-const Header: FunctionComponent<HeaderProps> = ({ isLogin, setIsLogin }) => {
+const Header: FunctionComponent<HeaderProps> = ({ isLogin, setIsLogin, loginFeature }) => {
   return (
     <header data-testid="header" className={styles.header}>
       <div className={styles.title}>Study Cards</div>
       <div className={styles.sideBar}>
-        {isLogin ? (
+        {!loginFeature ? false : isLogin ? (
           <div onClick={() => setIsLogin(false)} className={styles.sideButton}>
             Logout
           </div>

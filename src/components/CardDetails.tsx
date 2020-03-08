@@ -15,7 +15,7 @@ export const FrontDetail: React.SFC<FrontJapanese> = ({
       return (
         <div key={furiKanji.kanji} className={styles.furiKanji}>
           <div className={styles.furi}>{furiKanji.furi}</div>
-          <div className={styles.kanji}>{furiKanji.kanji}</div>
+          <div>{furiKanji.kanji}</div>
         </div>
       );
     });

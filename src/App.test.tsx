@@ -11,7 +11,7 @@ describe("App", () => {
 
   describe("login", () => {
     it("should be able to login and logout", () => {
-      const { getByText } = render(<App />);
+      const { getByText } = render(<App loginFeature={true}/>);
       const login = getByText("Login");
       expect(login).toBeInTheDocument();
 
