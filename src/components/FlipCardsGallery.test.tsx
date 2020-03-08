@@ -1,7 +1,7 @@
 import React from "react";
 import { render, waitForElement, fireEvent } from "@testing-library/react";
 import axios from "../utils/axios";
-import FlipCards from "./FlipCards";
+import FlipCardsGallery from "./FlipCardsGallery";
 import MockAdapter from "axios-mock-adapter";
 const mockAxios = new MockAdapter(axios);
 import { cards } from "../fixture/japanese";
@@ -13,28 +13,28 @@ describe("FlipCards", () => {
     mockAxios.onGet("/flipcards").reply(200, cards);
   });
   it("should render the Component", async () => {
-    const { getByTestId } = render(<FlipCards />);
+    const { getByTestId } = render(<FlipCardsGallery />);
 
     await waitForElement(() => getByTestId("flip-card"));
     expect(getByTestId("flip-cards")).toBeInTheDocument();
   });
 
   it("should render 1 card", async () => {
-    const { getAllByTestId, getByTestId } = render(<FlipCards />);
+    const { getAllByTestId, getByTestId } = render(<FlipCardsGallery />);
 
     await waitForElement(() => getByTestId("flip-card"));
     expect(getAllByTestId("flip-card")).toHaveLength(1);
   });
 
   it("should render font of card", async () => {
-    const { getByText, getByTestId } = render(<FlipCards />);
+    const { getByText, getByTestId } = render(<FlipCardsGallery />);
 
     await waitForElement(() => getByTestId("flip-card"));
     expect(getByText(/といあわせる/)).toBeInTheDocument();
   });
 
   it("should render back of card when clicked", async () => {
-    const { getByText, getByTestId } = render(<FlipCards />);
+    const { getByText, getByTestId } = render(<FlipCardsGallery />);
 
     await waitForElement(() => getByTestId("flip-card"));
     const flipCard = getByTestId("flip-card");
