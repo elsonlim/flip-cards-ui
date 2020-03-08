@@ -23,7 +23,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint -c .eslintrc.json --ext .ts src",
     "tc": "react-scripts test --coverage --watchAll=false",
-    "buildAndDeployEc2": "npm run build && scp -i ~/.ssh/flip-cards.pem -r ./build ubuntu@ec2-3-1-20-0.ap-southeast-1.compute.amazonaws.com:~/ui/",
+    "deploy": "scp -i ~/.ssh/flip-cards.pem -r ./build/* ubuntu@ec2-3-1-20-0.ap-southeast-1.compute.amazonaws.com:~/ui/",
+    "buildAndDeploy": "npm run build && npm run deploy",
     "buildAndDeployS3": "npm run build && aws s3 cp build/ s3://flip-cards --recursive"
   },
   "eslintConfig": {
