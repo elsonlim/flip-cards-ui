@@ -1,10 +1,10 @@
-import { furigana } from "../interface/card.interface";
+import { Furigana } from "../interface/card.interface";
 
-const textToFuriKanji = (text: string, furiKanji: furigana[]) => {
+const textToFuriKanji = (text: string, furiKanji: Furigana[]): Furigana[] => {
   const textArr = [];
   let remainingText = text;
 
-  for (let curFuriKanji of furiKanji) {
+  for (const curFuriKanji of furiKanji) {
     const indexOfKanji = remainingText.indexOf(curFuriKanji.kanji);
     const indexAfterKanji = indexOfKanji + curFuriKanji.kanji.length;
     const curFront = remainingText.slice(0, indexOfKanji);

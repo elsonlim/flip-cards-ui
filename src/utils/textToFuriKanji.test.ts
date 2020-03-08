@@ -60,7 +60,6 @@ describe("furiKranji", () => {
   ])(
     "should split to different object with multiple furi kanji",
     (text, furiKanji, expected) => {
-      const kanjiString = text;
       expect(splitText(text, furiKanji)).toMatchObject(expected);
     },
   );

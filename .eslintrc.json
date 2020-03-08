@@ -1,12 +1,15 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "node": true,
+    "jest": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/eslint-recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:css-modules/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -21,12 +24,16 @@
     "sourceType": "module"
   },
   "rules": {
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "@typescript-eslint/explicit-function-return-type": 0
   },
   "plugins": [
     "react",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "@typescript-eslint",
+    "css-modules"
+  ],
+  "ignorePatterns": [
+    "serviceWorker.ts"
   ],
   "settings": {
     "react": {

@@ -1,11 +1,11 @@
-export interface furigana {
+export interface Furigana {
   kanji: string;
   furi: string;
 }
 export interface FrontJapanese {
   text: string;
   hiragana: string;
-  furigana: furigana[];
+  furigana: Furigana[];
 }
 
 export interface BackJapanese {

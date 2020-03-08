@@ -26,13 +26,6 @@
   border: 2px solid var(--card-border-color--open);
 }
 
-.flipCardBody {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .tags {
   display: flex;
   flex-direction: row;
