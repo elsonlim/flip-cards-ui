@@ -10,7 +10,7 @@ interface HeaderProps {
 const Header: FunctionComponent<HeaderProps> = ({ isLogin, setIsLogin, loginFeature }) => {
   return (
     <header data-testid="header" className={styles.header}>
-      <div className={styles.title}>Study Cards</div>
+      <div className={styles.title}>Learning Cards</div>
       <div className={styles.sideBar}>
         {!loginFeature ? false : isLogin ? (
           <div onClick={() => setIsLogin(false)} className={styles.sideButton}>
