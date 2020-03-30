@@ -30,5 +30,5 @@ export const FrontDetail: React.SFC<FrontJapanese> = ({
 };
 
 export const BackDetail: React.SFC<BackJapanese> = ({ english }) => {
-  return <div>{english}</div>;
+  return <div className={styles.englishText}>{english}</div>;
 };

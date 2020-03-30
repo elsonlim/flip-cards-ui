@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+.englishText {
+  text-align: center;
+  word-break: break-word;
+}
+
 .fullText {
   display: flex;
   align-items: flex-end;
