@@ -11,9 +11,9 @@ export const FrontDetail: React.SFC<FrontJapanese> = ({
   const getTextWithFurigana = () => {
     const furiKanjiArray = textToFuriKanji(text, furigana);
 
-    return furiKanjiArray.map(furiKanji => {
+    return furiKanjiArray.map((furiKanji, index) => {
       return (
-        <div key={furiKanji.kanji} className={styles.furiKanji}>
+        <div key={`${index}-${furiKanji.kanji}`} className={styles.furiKanji}>
           <div className={styles.furi}>{furiKanji.furi}</div>
           <div>{furiKanji.kanji}</div>
         </div>
