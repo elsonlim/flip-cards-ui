@@ -1,6 +1,14 @@
 .flipcards {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: calc(100vh - 8em);
+}
+
+.flipcardsGallery {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+  overflow: auto;
 }

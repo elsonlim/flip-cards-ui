@@ -35,7 +35,9 @@ export const FlipCardsGallery: React.SFC<FlipCardsGalleryInterface> = ({
 
   return (
     <div className={styles.flipcards} data-testid="flip-cards">
-      {renderCards()}
+      <div className={styles.flipcardsGallery}>
+        {renderCards()}
+      </div>
     </div>
   );
 };

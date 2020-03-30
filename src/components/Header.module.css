@@ -1,5 +1,6 @@
 .header {
   background-color: var(--header-bg-color);
+  position: relative;
   display: flex;
   flex-direction: row;
   height: 5em;
