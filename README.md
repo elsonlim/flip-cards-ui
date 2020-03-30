@@ -42,3 +42,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## To Run Locally
+
+When running locally, ensure that you have a **.env** file created with the following content:
+```
+REACT_APP_API_URL=http://localhost:5000
+```
+
+The port should tally with the port configured in **flip-cards-api**.
