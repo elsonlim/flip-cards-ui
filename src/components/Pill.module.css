@@ -1,9 +1,19 @@
 .pill {
   font-size: 0.8rem;
-  padding: 0.1em;
+  padding: 0.1em 0.3em;
   margin-left: 0.5em;
   border: 1px solid var(--card-border-color);
   border-radius: 0.5em;
   background-color: var(--card-bg-color);
   color: var(--card-text-color);
+}
+
+.backPill {
+  font-size: 0.8rem;
+  padding: 0.1em 0.3em;
+  margin-left: 0.5em;
+  border: 1px solid var(--card-bg-color);
+  border-radius: 0.5em;
+  background-color: var(--card-text-color);
+  color: var(--card-text-color--open);
 }

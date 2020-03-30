@@ -41,7 +41,7 @@ const FlipCard: React.SFC<FlipCardInterface> = ({
       </div>
       <div className={styles.tags}>
         {data.tags.map(tag => (
-          <Pill key={tag} tag={tag} />
+          <Pill key={tag} tag={tag} isFrontFacing={isFrontFacing}/>
         ))}
       </div>
     </div>
