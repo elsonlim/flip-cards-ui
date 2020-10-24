@@ -1,0 +1,28 @@
+.side {
+    display: inline-block;
+    min-width: 80px;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.side:hover {
+    font-weight: bold;
+}
+
+.left {
+    border: 1px solid var(--card-bg-color);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.right {
+    border: 1px solid var(--card-bg-color);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.isSelected {
+    background-color: var(--card-bg-color);
+    color: var(--card-text-color);
+}
