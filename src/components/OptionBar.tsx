@@ -1,8 +1,8 @@
 import React from "react";
-import { Checkbox } from "semantic-ui-react";
 import { connect } from "react-redux";
 import { setDefaultSide } from "../actionCreators/optionBarActions";
 import { Store } from "../store";
+import ToggleButton from "./ToggleButton";
 import styles from "./OptionBar.module.css";
 
 const mapStatesToProps = (store: Store) => {
@@ -26,12 +26,11 @@ const FlipDefaultSide: React.SFC<FlipDefaultSideInterface> = ({
 }) => {
   return (
     <div className={styles.toggle}>
-      <span className={styles.toggleText}>Toggle All Cards:</span>
-      <Checkbox
-        slider
-        onClick={() => {
-          setDefaultSide(!defaultSide);
-        }}
+      <ToggleButton
+        leftText="Japanese"
+        rightText="English"
+        isDefaultSide={defaultSide}
+        setDefaultSide={setDefaultSide}
       />
     </div>
   );
