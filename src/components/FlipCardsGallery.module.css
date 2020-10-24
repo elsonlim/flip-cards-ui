@@ -11,4 +11,5 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   overflow: auto;
+  justify-content: center;
 }
