@@ -1,0 +1,11 @@
+@import "./colors.css";
+
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: inherit;
+  border-collapse: collapse;
+}

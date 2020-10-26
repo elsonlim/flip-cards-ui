@@ -1,0 +1,27 @@
+.flipCardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.englishText {
+  text-align: center;
+  word-break: break-word;
+}
+
+.fullText {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.furiKanji {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.furi {
+  font-size: 0.6rem;
+}

@@ -1,0 +1,14 @@
+:root {
+  --main-bg-color: #f5f5f5;
+
+  --header-bg-color: #4682b4;
+  --header-text-color: #f5f5f5;
+
+  --card-border-color: #f5f5f5;
+  --card-bg-color: #4682b4;
+  --card-text-color: #f5f5f5;
+
+  --card-border-color--open: #4682b4;
+  --card-bg-color--open: #f5f5f5;
+  --card-text-color--open: black;
+}
