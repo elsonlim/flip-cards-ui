@@ -6,7 +6,7 @@ phases:
       nodejs: 12
     commands:
       - echo "installing"
-      - npm install
+      - npm instal
   pre_build:
     commands:
       - echo "running test"
